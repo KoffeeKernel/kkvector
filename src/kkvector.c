@@ -52,3 +52,10 @@ int kkv_get(kkv_vector* v, size_t index, void* dst) {
 	memcpy(dst, v->data + index * v->stride, v->stride);
 	return 0;
 }
+
+int kkv_set(kkv_vector* v, size_t index, const void* src) {
+	if (index >= v->size) return 1;
+
+	memcpy(v->data + index * v->stride, src, v->stride);
+	return 0;
+}

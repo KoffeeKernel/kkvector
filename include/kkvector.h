@@ -29,4 +29,7 @@ void kkv_pop(kkv_vector* v);
 // Gets the element at a given index.
 int kkv_get(kkv_vector* v, size_t index, void* dst);
 
+// Sets the value of the element at a given index.
+int kkv_set(kkv_vector* v, size_t index, const void* src);
+
 #endif  // KKVECTOR_H
