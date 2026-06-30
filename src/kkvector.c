@@ -41,3 +41,7 @@ int kkv_push(kkv_vector* v, const void* src) {
 	v->size++;
 	return 0;
 }
+
+void kkv_pop(kkv_vector* v) {
+	if (v->size > 0) v->size--;
+}

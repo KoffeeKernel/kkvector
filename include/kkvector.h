@@ -23,4 +23,7 @@ int kkv_reserve(kkv_vector* v, size_t size);
 // Pushes an element to the back.
 int kkv_push(kkv_vector* v, const void* src);
 
+// Pops the last element if it exists.
+void kkv_pop(kkv_vector* v);
+
 #endif  // KKVECTOR_H
