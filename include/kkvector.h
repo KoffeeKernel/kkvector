@@ -26,4 +26,7 @@ int kkv_push(kkv_vector* v, const void* src);
 // Pops the last element if it exists.
 void kkv_pop(kkv_vector* v);
 
+// Gets the element at a given index.
+int kkv_get(kkv_vector* v, size_t index, void* dst);
+
 #endif  // KKVECTOR_H

@@ -45,3 +45,10 @@ int kkv_push(kkv_vector* v, const void* src) {
 void kkv_pop(kkv_vector* v) {
 	if (v->size > 0) v->size--;
 }
+
+int kkv_get(kkv_vector* v, size_t index, void* dst) {
+	if (index >= v->size) return 1;
+
+	memcpy(dst, v->data + index * v->stride, v->stride);
+	return 0;
+}
