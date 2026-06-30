@@ -17,4 +17,7 @@ int kkv_init(kkv_vector* v, size_t stride, size_t capacity);
 // Frees a vector.
 void kkv_free(kkv_vector* v);
 
+// Reserves space for a given number of elements.
+int kkv_reserve(kkv_vector* v, size_t size);
+
 #endif  // KKVECTOR_H

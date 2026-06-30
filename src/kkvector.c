@@ -18,3 +18,17 @@ int kkv_init(kkv_vector* v, size_t stride, size_t capacity) {
 void kkv_free(kkv_vector* v) {
 	free(v->data);
 }
+
+int kkv_reserve(kkv_vector* v, size_t size) {
+	if (v->capacity >= size) return 0;
+
+	size_t m        = (size + v->capacity - 1) / v->capacity;
+	size_t capacity = v->capacity * m;
+
+	char* data = realloc(v->data, capacity * v->stride);
+	if (!data) return 1;
+
+	v->capacity = capacity;
+	v->data     = data;
+	return 0;
+}
