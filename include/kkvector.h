@@ -20,4 +20,7 @@ void kkv_free(kkv_vector* v);
 // Reserves space for a given number of elements.
 int kkv_reserve(kkv_vector* v, size_t size);
 
+// Pushes an element to the back.
+int kkv_push(kkv_vector* v, const void* src);
+
 #endif  // KKVECTOR_H
