@@ -32,4 +32,7 @@ int kkv_get(kkv_vector* v, size_t index, void* dst);
 // Sets the value of the element at a given index.
 int kkv_set(kkv_vector* v, size_t index, const void* src);
 
+// Clears the vector.
+void kkv_clear(kkv_vector* v);
+
 #endif  // KKVECTOR_H

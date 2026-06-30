@@ -59,3 +59,7 @@ int kkv_set(kkv_vector* v, size_t index, const void* src) {
 	memcpy(v->data + index * v->stride, src, v->stride);
 	return 0;
 }
+
+void kkv_clear(kkv_vector* v) {
+	v->size = 0;
+}
