@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.14)
 
 project(kkvector
-	VERSION      0.7
+	VERSION      1.0
 	DESCRIPTION  "A vector library in C"
 	HOMEPAGE_URL "https://github.com/KoffeeKernel/kkvector"
 	LANGUAGES    C
